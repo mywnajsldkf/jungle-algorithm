@@ -17,7 +17,8 @@ for i in range(T):
     second = 0
     min = 10000
 
-    for j in range(2, n//2 + 1):
+    for j in range(n//2 + 1, 0):
+
         if(numbers[j] == False and numbers[n-j] == False):
             cha = n-j-j
             if(min > cha):
