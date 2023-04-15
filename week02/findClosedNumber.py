@@ -23,6 +23,7 @@ def binary_search(numbers, key):
     elif left == len(a):
         print(numbers[len(a)-1])
     else:
+        print(left, right)
         prev_num = numbers[left-1]
         next_num = numbers[right+1]
 
