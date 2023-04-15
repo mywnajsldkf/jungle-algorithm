@@ -9,22 +9,23 @@ liquid.sort()
 left, right = 0, N-1
 
 answer = abs(liquid[right] + liquid[left])
-left_value, right_value = liquid[left], liquid[right]
+final = [liquid[left], liquid[right]]
 
 while left < right:
-    total = liquid[left] + liquid[right]
+    left_value = liquid[left]
+    right_value = liquid[right]
 
+    total = left_value + right_value
     if abs(total) < answer:
         answer = abs(total)
-        left_value = liquid[left]
-        right_value = liquid[right]
+        final = [left_value, right_value]
         if answer == 0:
             break
     # 양수이면
     if total > 0:
         right -= 1
     # 음수이면
-    elif total < 0:
+    else:
         left += 1
 
-print(left_value, right_value)
+print(final[0], final[1])
