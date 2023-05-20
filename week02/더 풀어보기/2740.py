@@ -20,6 +20,7 @@ for row in range(N):
     for col in range(K):
         total = 0
         for i in range(M):
+            print(row, col, i)
             total += matrixA[row][i] * matrixB[i][col]
         result[row][col] = total
 
